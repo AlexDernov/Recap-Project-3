@@ -14,3 +14,16 @@ const pagination = document.querySelector('[data-js="pagination"]');
 const maxPage = 1;
 const page = 1;
 const searchQuery = "";
+
+async function fetchCharacters(){
+
+    const response = await fetch("https://rickandmortyapi.com/api/character")
+
+      const data = await response.json();
+      /* console.log(data); */
+
+      cardContainer.innerHTML ="";
+        createCharacterCard(card).forEach((card) =>cardContainer.append(card));
+
+}
+  fetchCharacters();
