@@ -1,12 +1,16 @@
-export function navButtonPrevious() {
+
+
+export function navButtonPrevious(broccoli) {
     const navButtonPrevious = document.createElement("button");
-    navButtonPrevious.classList.add("button button--prev");
+    navButtonPrevious.classList.add("button", "button--prev");
     navButtonPrevious.textContent = "previous";
-   /*  navButtonPrevious.addEventListener("click", ) */
+    navButtonPrevious.addEventListener("click", broccoli);
+    return navButtonPrevious;
 }
-export function navButtonNext() {
+export function navButtonNext(broccoli) {
     const navButtonNext = document.createElement("button");
-    navButtonNext.classList.add("button button--next");
+    navButtonNext.classList.add("button", "button--next");
     navButtonNext.textContent = "next";
-   /*  navButtonNext.addEventListener("click", ) */
+    navButtonNext.addEventListener("click", broccoli);
+    return navButtonNext;
 }
